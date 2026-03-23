@@ -1,5 +1,10 @@
 .DS_Store
-__pycache__/*
-app/__pycache__/*
-uploads/*
-app/static/Output/*
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+uploads/
+app/static/Output/

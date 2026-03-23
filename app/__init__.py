@@ -1,9 +1,35 @@
-from flask import Flask
-from config import Config
+"""Dash application factory for MaxOvertime v2."""
+
+from __future__ import annotations
+
+import dash
+import dash_bootstrap_components as dbc
 
 
-app = Flask(__name__)
-app.config.from_object(Config)
+def create_app() -> dash.Dash:
+    """Create and configure the Dash application."""
+    app = dash.Dash(
+        __name__,
+        external_stylesheets=[
+            dbc.themes.BOOTSTRAP,
+            "https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Figtree:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap",
+        ],
+        suppress_callback_exceptions=True,
+        assets_folder="../assets",
+        title="Max Overtime",
+    )
 
+    from app.layout import build_layout
 
-from app import routes
+    app.layout = build_layout()
+
+    from app.callbacks import language, navigation, upload, processing, plot, export
+
+    language.register(app)
+    navigation.register(app)
+    upload.register(app)
+    processing.register(app)
+    plot.register(app)
+    export.register(app)
+
+    return app

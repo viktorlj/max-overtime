@@ -2,8 +2,13 @@
 
 from __future__ import annotations
 
+from pathlib import Path
+
 import dash
 import dash_bootstrap_components as dbc
+
+# Project root: one level up from this file's directory (app/)
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 
 def create_app() -> dash.Dash:
@@ -15,7 +20,7 @@ def create_app() -> dash.Dash:
             "https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Figtree:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap",
         ],
         suppress_callback_exceptions=True,
-        assets_folder="../assets",
+        assets_folder=str(_PROJECT_ROOT / "assets"),
         title="Max Overtime",
     )
 

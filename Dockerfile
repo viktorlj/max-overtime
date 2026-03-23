@@ -8,6 +8,6 @@ COPY app/ app/
 COPY assets/ assets/
 COPY run.py .
 
-RUN pip install --no-cache-dir .
+RUN pip install --no-cache-dir -e .
 
 CMD exec gunicorn run:app.server --bind 0.0.0.0:$PORT --workers 2 --timeout 120

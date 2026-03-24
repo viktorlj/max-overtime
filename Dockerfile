@@ -14,4 +14,4 @@ RUN pip install --no-cache-dir \
     "xlsxwriter>=3.2" \
     "openpyxl>=3.1"
 
-CMD exec gunicorn run:app.server --bind 0.0.0.0:$PORT --workers 2 --timeout 120
+CMD exec gunicorn run:server --bind 0.0.0.0:$PORT --workers 2 --timeout 120

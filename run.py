@@ -2,7 +2,8 @@
 
 from app import create_app
 
-app = create_app()
+dash_app = create_app()
+server = dash_app.server  # Flask WSGI app for gunicorn
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    dash_app.run(debug=True)

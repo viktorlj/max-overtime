@@ -69,7 +69,7 @@ def create_plot_section() -> html.Div:
                         style={"borderRadius": "10px"},
                     ),
                     type="default",
-                    color="#2BB5A6",
+                    color="#1f6f61",
                 ),
                 # Download components
                 dcc.Download(id="download-pdf"),

@@ -17,7 +17,7 @@ def create_app() -> dash.Dash:
         __name__,
         external_stylesheets=[
             dbc.themes.BOOTSTRAP,
-            "https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Figtree:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap",
+            "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap",
         ],
         suppress_callback_exceptions=True,
         assets_folder=str(_PROJECT_ROOT / "assets"),

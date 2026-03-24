@@ -2,12 +2,16 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-COPY pyproject.toml .
-COPY src/ src/
-COPY app/ app/
-COPY assets/ assets/
-COPY run.py .
+COPY . .
 
-RUN pip install --no-cache-dir -e .
+RUN pip install --no-cache-dir \
+    "dash>=2.18" \
+    "dash-bootstrap-components>=1.6" \
+    "plotly>=5.24" \
+    "polars>=1.0" \
+    "gunicorn>=22.0" \
+    "kaleido>=0.2" \
+    "xlsxwriter>=3.2" \
+    "openpyxl>=3.1"
 
 CMD exec gunicorn run:app.server --bind 0.0.0.0:$PORT --workers 2 --timeout 120

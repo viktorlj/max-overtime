@@ -23,6 +23,7 @@ def create_app() -> dash.Dash:
         assets_folder=str(_PROJECT_ROOT / "assets"),
         title="Max Overtime",
     )
+    app._favicon = "favicon.svg"
 
     from app.layout import build_layout
 

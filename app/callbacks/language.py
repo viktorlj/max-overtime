@@ -32,6 +32,9 @@ def register(app: dash.Dash) -> None:
             return "sv", "lang-btn lang-btn-inactive", "lang-btn lang-btn-active"
 
     @app.callback(
+        Output("upload-section-label", "children"),
+        Output("heading-upload", "children"),
+        Output("heading-upload-sub", "children"),
         Output("label-sample-id", "children"),
         Output("input-sample-id", "placeholder"),
         Output("btn-add-timepoint", "children"),
@@ -50,6 +53,9 @@ def register(app: dash.Dash) -> None:
     def update_translations(lang: str):
         lang = lang or "en"
         return (
+            t("upload.section_label", lang),
+            t("upload.heading", lang),
+            t("upload.subtitle", lang),
             t("upload.sample_id", lang),
             t("upload.sample_id_placeholder", lang),
             "+ " + t("upload.add_timepoint", lang),

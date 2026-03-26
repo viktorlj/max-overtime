@@ -72,7 +72,7 @@ def create_upload_section() -> html.Div:
         html.Div(
             [
                 # Section header
-                html.Div("Data Input", className="section-label"),
+                html.Div("Data Input", className="section-label", id="upload-section-label"),
                 html.H3(
                     "Upload Variant Files",
                     className="section-title",

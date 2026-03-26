@@ -19,12 +19,20 @@ _TRANSLATIONS: dict[str, dict[str, str]] = {
     },
     "nav.tutorial": {
         "en": "Tutorial",
-        "sv": "Handledning",
+        "sv": "Tutorial",
     },
     # Upload section
+    "upload.section_label": {
+        "en": "Data Input",
+        "sv": "Datainmatning",
+    },
     "upload.heading": {
         "en": "Upload Variant Files",
         "sv": "Ladda upp variantfiler",
+    },
+    "upload.subtitle": {
+        "en": "Configure timepoints and upload one variant file per timepoint.",
+        "sv": "Konfigurera tidpunkter och ladda upp en variantfil per tidpunkt.",
     },
     "upload.sample_id": {
         "en": "Sample ID",

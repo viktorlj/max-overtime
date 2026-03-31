@@ -36,15 +36,15 @@ def create_variant_table() -> html.Div:
                         "textAlign": "left",
                         "padding": "9px 14px",
                         "fontSize": "13px",
-                        "fontFamily": "'Space Grotesk', system-ui, sans-serif",
+                        "fontFamily": "'JetBrains Mono', ui-monospace, monospace",
                         "border": "none",
                     },
                     style_header={
-                        "backgroundColor": "#17140f",
+                        "backgroundColor": "#213448",
                         "color": "rgba(255,255,255,0.9)",
                         "fontWeight": "600",
                         "fontSize": "11px",
-                        "fontFamily": "'Space Grotesk', system-ui, sans-serif",
+                        "fontFamily": "'JetBrains Mono', ui-monospace, monospace",
                         "textTransform": "uppercase",
                         "letterSpacing": "0.06em",
                         "border": "none",
@@ -52,16 +52,16 @@ def create_variant_table() -> html.Div:
                     style_data_conditional=[
                         {
                             "if": {"row_index": "odd"},
-                            "backgroundColor": "#faf9f4",
+                            "backgroundColor": "#f7f6f4",
                         },
                         {
                             "if": {"state": "selected"},
-                            "backgroundColor": "rgba(31, 111, 97, 0.08)",
+                            "backgroundColor": "rgba(84, 119, 146, 0.08)",
                             "border": "none",
                         },
                     ],
                     style_filter={
-                        "backgroundColor": "#f5f3eb",
+                        "backgroundColor": "#f7f6f4",
                         "border": "none",
                         "fontSize": "12px",
                     },

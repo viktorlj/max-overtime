@@ -9,10 +9,10 @@ import polars as pl
 
 from src.i18n import t
 
-# Trace color palette — earthy tones harmonising with molpath.css
+# Trace color palette — cool tones harmonising with molpath.css
 _TRACE_COLORS = [
-    "#1f6f61",  # teal (mp-accent)
-    "#c7642f",  # warm orange (mp-accent-2)
+    "#547792",  # blue-gray (mp-accent)
+    "#94b4c1",  # light blue (mp-accent-2)
     "#6366F1",  # indigo
     "#D94F4F",  # coral
     "#2a9d8f",  # seafoam
@@ -171,28 +171,28 @@ def register(app: dash.Dash) -> None:
         fig.update_layout(
             title=dict(
                 text=sample_name or "",
-                font=dict(family="Space Grotesk, system-ui, sans-serif", size=16, color="#17140f"),
+                font=dict(family="JetBrains Mono, ui-monospace, monospace", size=16, color="#213448"),
                 x=0,
                 xanchor="left",
             ),
             xaxis=dict(
                 title=dict(
                     text=t("upload.date", lang),
-                    font=dict(family="Space Grotesk, system-ui, sans-serif", size=12, color="#594f40"),
+                    font=dict(family="JetBrains Mono, ui-monospace, monospace", size=12, color="#3d5468"),
                 ),
-                gridcolor="#e3dbca",
-                linecolor="#c8bfae",
-                tickfont=dict(family="IBM Plex Mono, ui-monospace, monospace", size=11, color="#594f40"),
+                gridcolor="#eceae6",
+                linecolor="#94b4c1",
+                tickfont=dict(family="JetBrains Mono, ui-monospace, monospace", size=11, color="#3d5468"),
             ),
             yaxis=dict(
                 title=dict(
                     text=t("results.vaf_axis", lang),
-                    font=dict(family="Space Grotesk, system-ui, sans-serif", size=12, color="#594f40"),
+                    font=dict(family="JetBrains Mono, ui-monospace, monospace", size=12, color="#3d5468"),
                 ),
                 rangemode="tozero",
-                gridcolor="#e3dbca",
-                linecolor="#c8bfae",
-                tickfont=dict(family="IBM Plex Mono, ui-monospace, monospace", size=11, color="#594f40"),
+                gridcolor="#eceae6",
+                linecolor="#94b4c1",
+                tickfont=dict(family="JetBrains Mono, ui-monospace, monospace", size=11, color="#3d5468"),
                 ticksuffix="%",
             ),
             legend=dict(
@@ -201,16 +201,16 @@ def register(app: dash.Dash) -> None:
                 y=-0.18,
                 xanchor="center",
                 x=0.5,
-                font=dict(family="Space Grotesk, system-ui, sans-serif", size=12),
+                font=dict(family="JetBrains Mono, ui-monospace, monospace", size=12),
             ),
-            plot_bgcolor="#fffef9",
+            plot_bgcolor="#ffffff",
             paper_bgcolor="rgba(0,0,0,0)",
             hovermode="x unified",
             margin=dict(l=60, r=20, t=50, b=80),
             hoverlabel=dict(
                 bgcolor="white",
-                font=dict(family="Space Grotesk, system-ui, sans-serif", size=12),
-                bordercolor="#c8bfae",
+                font=dict(family="JetBrains Mono, ui-monospace, monospace", size=12),
+                bordercolor="#94b4c1",
             ),
         )
 

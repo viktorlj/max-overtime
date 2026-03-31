@@ -236,7 +236,7 @@
 
 .input-sample-id:focus {
     border-color: var(--mp-accent) !important;
-    box-shadow: 0 0 0 3px rgba(31, 111, 97, 0.12) !important;
+    box-shadow: 0 0 0 3px rgba(84, 119, 146, 0.12) !important;
     outline: none !important;
 }
 
@@ -280,7 +280,7 @@
     font-size: var(--mp-fs-xs);
     font-weight: 700;
     color: var(--mp-accent);
-    background: rgba(31, 111, 97, 0.08);
+    background: rgba(84, 119, 146, 0.08);
     padding: var(--mp-space-xs) 12px;
     border-radius: 20px;
     white-space: nowrap;
@@ -299,7 +299,7 @@
 
 .tp-date-input:focus {
     border-color: var(--mp-accent) !important;
-    box-shadow: 0 0 0 2px rgba(31, 111, 97, 0.12) !important;
+    box-shadow: 0 0 0 2px rgba(84, 119, 146, 0.12) !important;
 }
 
 /* Upload zone */
@@ -318,7 +318,7 @@
 
 .upload-zone:hover {
     border-color: var(--mp-accent) !important;
-    background: rgba(31, 111, 97, 0.06) !important;
+    background: rgba(84, 119, 146, 0.06) !important;
     transform: translateY(-1px);
 }
 
@@ -385,14 +385,14 @@
     border: none !important;
     background: linear-gradient(135deg, var(--mp-accent), var(--mp-accent-hover)) !important;
     color: #FFFFFF !important;
-    box-shadow: 0 4px 14px rgba(31, 111, 97, 0.25), var(--mp-shadow-card) !important;
+    box-shadow: 0 4px 14px rgba(84, 119, 146, 0.25), var(--mp-shadow-card) !important;
     transition: all 0.3s ease !important;
     cursor: pointer;
 }
 
 .btn-analyze:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(31, 111, 97, 0.35) !important;
+    box-shadow: 0 6px 20px rgba(84, 119, 146, 0.35) !important;
     filter: brightness(1.08);
 }
 
@@ -416,7 +416,7 @@
 .btn-add-tp:hover {
     border-color: var(--mp-accent) !important;
     color: var(--mp-accent) !important;
-    background: rgba(31, 111, 97, 0.06) !important;
+    background: rgba(84, 119, 146, 0.06) !important;
 }
 
 .btn-export {
@@ -532,7 +532,7 @@
 }
 
 .dash-spreadsheet-container .dash-spreadsheet-inner tr:hover td {
-    background-color: rgba(31, 111, 97, 0.06) !important;
+    background-color: rgba(84, 119, 146, 0.06) !important;
 }
 
 /* Filter input styling */
@@ -795,7 +795,7 @@
 }
 
 .col-req-table th {
-    background: rgba(31, 111, 97, 0.08);
+    background: rgba(84, 119, 146, 0.08);
     color: var(--mp-accent);
     font-family: var(--mp-sans);
     font-size: 11px;

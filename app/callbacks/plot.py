@@ -3,9 +3,7 @@
 from __future__ import annotations
 
 import dash
-import plotly.graph_objects as go
 from dash import Input, Output, State, no_update
-import polars as pl
 
 from src.i18n import t
 
@@ -37,6 +35,8 @@ def register(app: dash.Dash) -> None:
     def update_table(data_json: str | None, lang: str):
         if not data_json:
             return [], [], []
+
+        import polars as pl
 
         lang = lang or "en"
         df = pl.read_json(data_json.encode())
@@ -96,8 +96,12 @@ def register(app: dash.Dash) -> None:
         sample_name: str | None,
         lang: str,
     ):
+        import plotly.graph_objects as go
+
         if not data_json or not table_data:
             return go.Figure()
+
+        import polars as pl
 
         lang = lang or "en"
         df = pl.read_json(data_json.encode())

@@ -7,10 +7,6 @@ import json
 
 import dash
 from dash import Input, Output, State, callback_context, no_update, ALL
-import polars as pl
-
-from src.parsers.common import parse_file
-from src.processing.merge import merge_timepoints
 from src.i18n import t
 
 
@@ -44,6 +40,9 @@ def register(app: dash.Dash) -> None:
     ):
         if not n_clicks:
             return no_update, no_update, no_update, no_update, no_update, no_update
+
+        from src.parsers.common import parse_file
+        from src.processing.merge import merge_timepoints
 
         lang = lang or "en"
         show = {"display": "block"}

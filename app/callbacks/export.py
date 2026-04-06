@@ -3,11 +3,7 @@
 from __future__ import annotations
 
 import dash
-import plotly.graph_objects as go
 from dash import Input, Output, State, no_update, dcc
-import polars as pl
-
-from src.processing.export import export_pdf, export_excel, export_tsv
 
 
 def register(app: dash.Dash) -> None:
@@ -23,6 +19,9 @@ def register(app: dash.Dash) -> None:
     def download_pdf(n_clicks, figure_dict, sample_name):
         if not n_clicks or not figure_dict:
             return no_update
+
+        import plotly.graph_objects as go
+        from src.processing.export import export_pdf
 
         fig = go.Figure(figure_dict)
         pdf_bytes = export_pdf(fig)
@@ -40,6 +39,9 @@ def register(app: dash.Dash) -> None:
         if not n_clicks or not data_json:
             return no_update
 
+        import polars as pl
+        from src.processing.export import export_excel
+
         df = pl.read_json(data_json.encode())
         excel_bytes = export_excel(df, sample_name or "Variants")
         filename = f"{sample_name or 'variants'}.xlsx"
@@ -55,6 +57,9 @@ def register(app: dash.Dash) -> None:
     def download_tsv(n_clicks, data_json, sample_name):
         if not n_clicks or not data_json:
             return no_update
+
+        import polars as pl
+        from src.processing.export import export_tsv
 
         df = pl.read_json(data_json.encode())
         tsv_bytes = export_tsv(df)

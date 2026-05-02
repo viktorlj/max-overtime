@@ -48,6 +48,7 @@ def register(app: dash.Dash) -> None:
         Output("nav-analysis", "children"),
         Output("nav-tutorial", "children"),
         Output("table-hint", "children"),
+        Output("disclaimer-text", "children"),
         Input("store-language", "data"),
     )
     def update_translations(lang: str):
@@ -69,4 +70,5 @@ def register(app: dash.Dash) -> None:
             t("nav.analysis", lang),
             t("nav.tutorial", lang),
             t("table.hint", lang),
+            t("disclaimer.text", lang),
         )

@@ -45,5 +45,22 @@ def build_layout() -> html.Div:
                 id="tutorial-page",
                 style={"display": "none"},
             ),
+
+            html.Footer(
+                html.Div(
+                    html.P(
+                        "Max Overtime. For research use and clinical decision support only. "
+                        "Not a standalone diagnostic device. Outputs may be incomplete or "
+                        "incorrect and must be reviewed by qualified experts in the full "
+                        "clinical, laboratory, and histopathological context. The authors "
+                        "assume no responsibility for clinical decisions or other "
+                        "consequences of use.",
+                        id="disclaimer-text",
+                        className="mp-soft",
+                    ),
+                    className="app-footer-inner",
+                ),
+                className="app-footer",
+            ),
         ],
     )

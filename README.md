@@ -41,6 +41,11 @@ uv pip install -e ".[vcf]"
 4. Use the variant table to select which variants to plot
 5. Export results as PDF, Excel, or TSV
 
+## Caveats
+
+1. **For research use and clinical decision support only.** Not a standalone diagnostic device. Outputs may be incomplete or incorrect and must be reviewed by qualified experts in the full clinical, laboratory, and histopathological context. The authors assume no responsibility for clinical decisions or other consequences of use.
+2. Input files, variant normalization, and sequencing depth should be reviewed before interpreting longitudinal VAF changes.
+
 ## Supported file formats
 
 | Format | Extension | VAF source |

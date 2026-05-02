@@ -177,6 +177,23 @@
     padding: 32px 24px 80px;
 }
 
+.app-footer {
+    border-top: 1px solid var(--mp-border);
+    background: var(--mp-panel);
+}
+
+.app-footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 24px 24px;
+}
+
+.app-footer p {
+    margin: 0;
+    font-size: var(--mp-fs-xs);
+    line-height: 1.6;
+}
+
 
 /* ===========================================================
    CARDS & SECTIONS

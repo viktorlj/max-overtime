@@ -21,6 +21,10 @@ _TRANSLATIONS: dict[str, dict[str, str]] = {
         "en": "Tutorial",
         "sv": "Tutorial",
     },
+    "disclaimer.text": {
+        "en": "Max Overtime. For research use and clinical decision support only. Not a standalone diagnostic device. Outputs may be incomplete or incorrect and must be reviewed by qualified experts in the full clinical, laboratory, and histopathological context. The authors assume no responsibility for clinical decisions or other consequences of use.",
+        "sv": "Max Overtime. Endast för forskningsbruk och kliniskt beslutsstöd. Inte ett fristående diagnostiskt verktyg. Resultat kan vara ofullständiga eller felaktiga och måste granskas av kvalificerade experter i fullständigt kliniskt, laboratoriemässigt och histopatologiskt sammanhang. Författarna tar inget ansvar för kliniska beslut eller andra konsekvenser av användning.",
+    },
     # Upload section
     "upload.section_label": {
         "en": "Data Input",
